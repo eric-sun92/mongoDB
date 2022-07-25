@@ -1,0 +1,34 @@
+show dbs 
+use appdb
+show collections
+cls
+db.users.insertOne()
+db.users.insertMany()
+
+#query methods
+db.users.find()
+db.users.find().sort({key: -1})
+db.users.find().limit(2)
+db.users.find({key: value})
+db.users.find({key: value}, {key: 1, key: 0})
+db.users.find({name: {$ne: "Sally"}}), $gte, $lte
+db.users.find({name: {$in: ["Kyle, Sally"]}}), $nin
+db.users.find({address: {$exists: true/false}}), *true returns even if value equals null
+$and, $or, $not
+$expr: { $gt: ["$debt", "$balance"]}
+db.users.find({"address.street": "123 St"})
+.findOne()
+.countDocuments()
+
+#update
+db.users.updateOne({key: value} *this finds the object u want to update, $set: {newKey: newValue})
+$inc - increment
+$rename: {key: newKey}
+{$unset: {age: ""}}
+{$push: {hobbies: "Swimming"}}
+$pull
+ 
+updateMany()
+replaceOne - usually dont use this, just use update
+deleteOne
+deleteMany
