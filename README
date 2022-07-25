@@ -1,3 +1,5 @@
+MongoDB Shell Basics
+------------------------
 show dbs 
 use appdb
 show collections
@@ -32,3 +34,23 @@ updateMany()
 replaceOne - usually dont use this, just use update
 deleteOne
 deleteMany
+
+
+mongoose basics
+----------
+
+npm i mongoose
+then require mongoose
+mongoose.connect('mongodb://localhost/db_name')
+.on for error and .once for connection log
+
+create Schema in another file and export the Schema
+Schema notes - 
+    u can pass a schema into a value for a key inside a schema
+    
+Queries
+    .find()
+    .where chaining 
+        -.gt, .equals, .limit, .select, .exists
+    .populate when u have a schema object inside another schema 
+    

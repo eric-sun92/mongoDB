@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "mongoose": "^6.4.6",
+    "nodemon": "^2.0.19"
+  },
+  "name": "mongodb",
+  "description": "MongoDB Shell Basics ------------------------ show dbs  use appdb show collections cls db.users.insertOne() db.users.insertMany()",
+  "version": "1.0.0",
+  "main": "test.js",
+  "scripts": {
+    "devStart": "nodemon test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eric-sun92/mongoDB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eric-sun92/mongoDB/issues"
+  },
+  "homepage": "https://github.com/eric-sun92/mongoDB#readme"
+}
